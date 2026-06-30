@@ -26,13 +26,14 @@ new-claude-tab() {
     [[ -n "$file" && -f "$file" ]] && cat "$file"
   } > "$msg_file"
 
-  # Build the claude command; escape " as \" for embedding in a TOML double-quoted string
+  # Build the claude command; self-delete the TOML config on run, then start claude
+  # Escape " as \" for embedding in a TOML double-quoted string
   local claude_cmd toml_cmd
   if [[ -s "$msg_file" ]]; then
-    claude_cmd="claude \"\$(cat ${msg_file}; rm -f ${msg_file})\""
+    claude_cmd="rm -f ${config_path}; claude \"\$(cat ${msg_file}; rm -f ${msg_file})\""
   else
     rm -f "$msg_file"
-    claude_cmd="claude"
+    claude_cmd="rm -f ${config_path}; claude"
   fi
   toml_cmd="${claude_cmd//\"/\\\"}"
 
