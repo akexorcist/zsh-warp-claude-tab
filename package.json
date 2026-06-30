@@ -1,0 +1,21 @@
+{
+  "name": "zsh-warp-claude-tab",
+  "version": "1.0.0",
+  "description": "zsh plugin and Claude Code agent skill to open a new Warp tab with a pre-loaded Claude session",
+  "bin": {
+    "zsh-warp-claude-tab": "./bin/install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akexorcist/zsh-warp-claude-tab.git"
+  },
+  "keywords": [
+    "zsh",
+    "warp",
+    "claude",
+    "claude-code",
+    "terminal",
+    "oh-my-zsh"
+  ],
+  "license": "MIT"
+}
