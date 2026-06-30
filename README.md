@@ -90,6 +90,12 @@ The new session starts in the same working directory. The hand-off file is delet
 
 ---
 
+## License
+
+Apache License 2.0 — see [LICENSE](LICENSE) for details.
+
+---
+
 ## How it works
 
 1. Writes the prompt/file content to a temp file
