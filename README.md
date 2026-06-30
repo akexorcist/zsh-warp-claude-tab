@@ -95,4 +95,5 @@ The new session starts in the same working directory. The hand-off file is delet
 1. Writes the prompt/file content to a temp file
 2. Generates a Warp Tab Config TOML in `~/.warp/tab_configs/`
 3. Opens it via `open "warp://tab_config/<name>"` — Warp opens a new tab and runs Claude natively
-4. Temp files are deleted automatically after the session starts
+4. Deletes the TOML from the calling tab after 2 seconds
+5. The message temp file is deleted after being read by the new session
