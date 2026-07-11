@@ -2,7 +2,7 @@
 
 A zsh plugin and Claude Code agent skill to open a new [Warp](https://www.warp.dev/) terminal tab with a pre-loaded Claude Code session — ideal for handing off tasks between sessions without copy-pasting.
 
-<video src="assets/demo.mp4" controls muted></video>
+![demo](assets/demo.gif)
 
 Uses Warp's `warp://tab_config` URI scheme.
 
